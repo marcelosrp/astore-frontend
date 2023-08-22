@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import 'mixins';
 @import 'variables';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 *,
 *::before,
@@ -12,6 +13,7 @@
 }
 
 html {
+  font-family: 'Noto Sans', sans-serif;
   font-size: 10px;
 }
 
@@ -19,7 +21,56 @@ body {
   font-size: 1.6rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 192rem;
   margin: 0 auto;
+  padding: 0 1.6rem;
+  width: 100%;
+}
+
+.contact-bar {
+  background-color: var(--color-black);
+  padding: 0.8rem 0;
+  min-height: 4rem;
+  width: 100%;
+
+  &__grid {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+
+    @include breakpoint('md') {
+      justify-content: flex-end;
+    }
+  }
+
+  &__phone {
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    i::before {
+      color: gray;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 0.8rem;
+
+    a {
+      font-size: 1.8rem;
+
+      i::before {
+        color: gray;
+      }
+    }
+  }
 }
