@@ -31,7 +31,7 @@ a {
   border: none;
   background-color: transparent;
   display: flex;
-  gap: 0.8rem;
+  gap: 1.6rem;
   text-decoration: none;
   width: fit-content;
 
@@ -40,9 +40,26 @@ a {
     color: var(--color-black);
     padding: 0.4rem 1.6rem;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 300;
     letter-spacing: 10%;
+
+    @include breakpoint('md') {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__secondary {
+    border: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 10%;
+
+    @include breakpoint('md') {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -98,7 +115,7 @@ a {
 
 .hero {
   background-image: url('../images/hero.jpg');
-  background-position: 0 0;
+  background-position: 60% 0;
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -106,6 +123,10 @@ a {
   position: relative;
   width: 100%;
   z-index: 1;
+
+  @include breakpoint('md') {
+    background-position: 0 0;
+  }
 
   &::before {
     background-color: rgba(0, 0, 0, 0.3);
@@ -141,7 +162,7 @@ a {
     padding-bottom: 1.6rem;
 
     img {
-      width: 30%;
+      width: 12.2rem;
 
       @include breakpoint('md') {
         width: initial;
@@ -150,7 +171,7 @@ a {
 
     &__legend {
       color: var(--color-white);
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       font-weight: 300;
       line-height: 7rem;
 
@@ -168,33 +189,46 @@ a {
     margin-top: 4rem;
 
     &__title {
-      color: var(--color-black);
-      font-size: 2.6rem;
+      color: var(--color-white);
+      font-size: 2.4rem;
       font-weight: 300;
       line-height: 3.5rem;
 
       @include breakpoint('md') {
+        color: var(--color-black);
         font-size: 4.4rem;
       }
 
       span {
-        color: var(--color-white);
+        color: var(--color-black);
         font-weight: 600;
+
+        @include breakpoint('md') {
+          color: var(--color-white);
+        }
       }
     }
 
     &__subtitle {
-      color: var(--color-black);
+      color: var(--color-white);
       font-size: 2rem;
       font-weight: 600;
+
+      @include breakpoint('md') {
+        color: var(--color-black);
+      }
     }
 
     &__text {
-      color: var(--color-black);
+      color: var(--color-white);
       font-size: 2rem;
       font-weight: 300;
       line-height: 2.8rem;
       margin-top: 1.6rem;
+
+      @include breakpoint('md') {
+        color: var(--color-black);
+      }
     }
   }
 }
@@ -255,7 +289,11 @@ a {
       }
 
       .cases-home__case-text {
-        width: 80%;
+        width: 100%;
+
+        @include breakpoint('md') {
+          width: 80%;
+        }
       }
 
       .cases-home__case-tag {
@@ -307,6 +345,10 @@ a {
       grid-column-start: span 6;
       padding: 24px;
     }
+
+    a {
+      margin-top: 2rem;
+    }
   }
 
   &__case-title {
@@ -339,11 +381,12 @@ a {
     display: flex;
     font-size: 1.4rem;
     font-weight: 400;
-    gap: 1.6rem;
+    gap: 1rem;
     margin: 2rem 0;
 
     @include breakpoint('md') {
       font-size: 1.6rem;
+      gap: 1.6rem;
     }
 
     i {
@@ -383,16 +426,6 @@ a {
       width: 65%;
     }
   }
-
-  &__case-cta {
-    color: var(--color-white);
-    display: flex;
-    font-size: 2.4rem;
-    font-weight: 300;
-    gap: 1.6rem;
-    margin-top: 2rem;
-    text-transform: uppercase;
-  }
 }
 
 .all-cases {
@@ -417,6 +450,127 @@ a {
 
     @include breakpoint('md') {
       font-size: 2.4rem;
+    }
+  }
+}
+
+.about {
+  background-color: var(--color-black);
+  min-height: 48rem;
+  padding: 2.4rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20rem 20rem 0 0;
+    border-color: var(--color-blue) transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @include breakpoint('md', 'max-width') {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20rem 20rem;
+    border-color: transparent transparent var(--color-blue) transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    @include breakpoint('md', 'max-width') {
+      display: none;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 2.4rem;
+    font-weight: 300;
+    padding-bottom: 1.6rem;
+    display: flex;
+
+    @include breakpoint('md') {
+      font-size: 4.2rem;
+      margin: 0 7.2rem;
+      width: 520px;
+      justify-content: flex-end;
+    }
+  }
+
+  &__description__subtitle {
+    color: var(--color-light-blue2);
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint('md') {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__description__text {
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint('md') {
+      font-size: 2rem;
+    }
+  }
+
+  .swiper {
+    height: 100%;
+    margin: 3rem 0;
+    width: 100%;
+
+    @include breakpoint('md') {
+      padding: 0 7.2rem;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+
+    img {
+      @include breakpoint('md', 'max-width') {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    @include breakpoint('md') {
+      flex-direction: row;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    @include breakpoint('md', 'max-width') {
+      top: 20%;
     }
   }
 }

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <title>Astore :: Business Advisory</title>
 </head>
 
@@ -30,10 +31,10 @@
     <section class="hero">
       <div class="container">
         <div class="hero__content">
-          <div class="hero__logo">
-            <img src="images/logo-astroe.svg" alt="Astore" width="248" height="95">
+          <figure class="hero__logo">
+            <img src="images/logo-astore.svg" alt="Astore" width="248" height="95">
             <span class="hero__logo__legend">Business Advisory</span>
-          </div>
+          </figure>
           <div class="hero__description">
             <h1 class="hero__description__title">
               Gestão por uma nova <span>visão</span>
@@ -81,7 +82,7 @@
             crescimento da
             empresa.
           </p>
-          <a href="#" class="cases-home__case-cta">
+          <a href="#" class="button button__secondary">
             conheça o case
             <i class="bi bi-arrow-right"></i>
           </a>
@@ -105,7 +106,7 @@
             contratada para
             abordar esses desafios e impulsionar o crescimento da empresa.
           </p>
-          <a href="#" class="cases-home__case-cta">
+          <a href="#" class="button button__secondary">
             conheça o case
             <i class="bi bi-arrow-right"></i>
           </a>
@@ -117,10 +118,78 @@
       </div>
     </section>
     <section class="all-cases">
-      <a href="#">VER TODOS OS CASES <i class="bi bi-plus-circle"></i></a>
+      <a href="#" class="button button__secondary">VER TODOS OS CASES <i class="bi bi-plus-circle"></i></a>
+    </section>
+    <section class="about">
+      <div class="container">
+        <h1 class="about__title">Quem somos</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure>
+                <img src="images/img-quem-somos.png" alt="Paulo Henrique Barbosa" width="250" height="310">
+              </figure>
+              <div class="about__description">
+                <h2 class="about__description__subtitle">Paulo Henrique Barbosa</h2>
+                <p class="about__description__text">
+                  Sou um Sócio da Astore, com ampla experiência em Planejamento Financeiro e Gestão Estratégica. Tenho
+                  apoiado diretamente
+                  o time executivo no desenvolvimento e implementação de estratégias para impulsionar o crescimento e a
+                  rentabilidade das
+                  empresas.
+                </p>
+                <p class="about__description__text">
+                  Sou graduado em Administração de Empresas pela PUC-SP e possuo um MBA em Finanças e Eficiência
+                  Empresarial
+                  pela FIA, além de um MBA em Gestão de Projetos. Minhas habilidades analíticas e conhecimentos
+                  aprofundados em otimização
+                  de rentabilidade e geração de valor são fundamentais para fornecer insights estratégicos e orientar a
+                  tomada de decisões
+                  financeiras.
+                </p>
+                <a href="#" class="button button__secondary">
+                  VER MAIS
+                  <i class="bi bi-plus-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <figure>
+                <img src="images/img-quem-somos.png" alt="Paulo Henrique Barbosa" width="250" height="310">
+              </figure>
+              <div class="about__description">
+                <h2 class="about__description__subtitle">Paulo Henrique Barbosa</h2>
+                <p class="about__description__text">
+                  Sou um Sócio da Astore, com ampla experiência em Planejamento Financeiro e Gestão Estratégica. Tenho
+                  apoiado diretamente
+                  o time executivo no desenvolvimento e implementação de estratégias para impulsionar o crescimento e a
+                  rentabilidade das
+                  empresas.
+                </p>
+                <p class="about__description__text">
+                  Sou graduado em Administração de Empresas pela PUC-SP e possuo um MBA em Finanças e Eficiência
+                  Empresarial
+                  pela FIA, além de um MBA em Gestão de Projetos. Minhas habilidades analíticas e conhecimentos
+                  aprofundados em otimização
+                  de rentabilidade e geração de valor são fundamentais para fornecer insights estratégicos e orientar a
+                  tomada de decisões
+                  financeiras.
+                </p>
+                <a href="#" class="button button__secondary">
+                  VER MAIS
+                  <i class="bi bi-plus-circle"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 
