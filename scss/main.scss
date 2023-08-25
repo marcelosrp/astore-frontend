@@ -670,6 +670,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+  background-attachment: fixed;
   height: 74rem;
   width: 100%;
 
@@ -759,6 +760,7 @@ a {
 
 .steps {
   background-color: var(--color-black);
+  background-attachment: fixed;
   height: auto;
   padding: 2.4rem;
   width: 100%;
