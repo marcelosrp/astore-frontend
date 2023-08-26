@@ -163,3 +163,70 @@
     }
   }
 }
+
+.cases-list {
+  width: 100%;
+  padding: 3.2rem 0;
+  background-color: var(--color-light-gray);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__case-item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3.2rem;
+  }
+
+  &__default-image {
+    grid-column-start: span 12;
+
+    @include breakpoint('md') {
+      grid-column-start: span 6;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__case-description {
+    grid-column-start: span 12;
+
+    @include breakpoint('md') {
+      grid-column-start: span 6;
+    }
+
+    .case-title {
+      color: #006666;
+      margin-bottom: 1.6rem;
+    }
+
+    .case-tag {
+      background-color: var(--color-black);
+      color: var(--color-white);
+    }
+
+    .case-date {
+      color: #006666;
+
+      span {
+        color: #006666;
+      }
+    }
+
+    .case-description {
+      color: #006666;
+      margin-bottom: 1.6rem;
+    }
+
+    .button {
+      color: #006666;
+    }
+  }
+}
