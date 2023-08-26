@@ -110,7 +110,7 @@
       grid-column-start: span 6;
     }
 
-    &__default-image {
+    &__main-image {
       img {
         width: 100%;
         max-width: 100%;
@@ -130,16 +130,18 @@
         display: none;
       }
 
-      & > div {
+      & > img {
         background-color: var(--color-light-blue2);
-        cursor: pointer;
         width: 13rem;
         height: 13rem;
         flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         scroll-snap-align: start;
+        overflow: hidden;
+      }
+
+      img {
+        cursor: pointer;
+        object-fit: cover;
       }
     }
   }

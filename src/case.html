@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="scss/main.scss" />
   <link rel="stylesheet" href="scss/case.scss" />
+  <script type="module" src="js/case.js"></script>
   <title>Astore :: Business Advisory</title>
 </head>
 
@@ -48,18 +49,28 @@
     </section>
     <section class="highlight">
       <div class="container">
-        <div class="highlight__gallery">
-          <figure class="highlight__gallery__default-image">
+        <div class="highlight__gallery" id="gallery1" data-js="gallery-container">
+          <figure class="highlight__gallery__main-image">/
             <img src="images/case-home-planejamentoestrategico.png" alt="PLanejamento Estratégico" width="655"
-              height="450">
-          </figure>
+              height="450" data-js="gallery-main-image">
+          </figure>/
           <div class="highlight__gallery__thumbs">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
+            <div>
+              <img src="images/case-home-planejamentoestrategico.png" alt="PLanejamento Estratégico" width="130"
+                height="130" data-js="gallery-thumbnail">
+            </div>
+            <div>
+              <img src="images/case-thumb1.jpg" alt="PLanejamento Estratégico" width="130" height="130"
+                data-js="gallery-thumbnail">
+            </div>
+            <div>
+              <img src="images/case-thumb2.jpg" alt="PLanejamento Estratégico" width="130" height="130"
+                data-js="gallery-thumbnail">
+            </div>
+            <div>
+              <img src="images/case-thumb3.jpg" alt="PLanejamento Estratégico" width="130" height="130"
+                data-js="gallery-thumbnail">
+            </div>
           </div>
         </div>
         <div class="highlight__description">
