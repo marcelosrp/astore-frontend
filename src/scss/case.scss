@@ -183,17 +183,46 @@
     gap: 3.2rem;
   }
 
-  &__default-image {
+  &__gallery {
     grid-column-start: span 12;
 
     @include breakpoint('md') {
       grid-column-start: span 6;
     }
 
-    img {
-      width: 100%;
-      max-width: 100%;
-      object-fit: cover;
+    &__main-image {
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__thumbs {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left: 3rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > img {
+        background-color: var(--color-light-blue2);
+        width: 13rem;
+        height: 13rem;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        overflow: hidden;
+      }
+
+      img {
+        cursor: pointer;
+        object-fit: cover;
+      }
     }
   }
 

@@ -24,8 +24,13 @@ a {
   text-decoration: none;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .button {
   border: none;
+  cursor: pointer;
   background-color: transparent;
   display: flex;
   gap: 1.6rem;
@@ -382,4 +387,11 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+
+.case-line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
