@@ -1,33 +1,19 @@
 {
   "name": "astore-frontend",
   "version": "1.0.0",
-  "main": "js/index.js",
+  "source": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html --open",
-    "start": "npm run build && npm run dev",
-    "build": "parcel build src/index.html --out-dir dist --no-cache"
+    "start": "parcel src/index.html src/case.html",
+    "build": "parcel build"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
     "eslint": "^8.47.0",
     "node-sass": "^9.0.0",
-    "parcel-bundler": "^1.8.1",
-    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel": "^2.9.3",
     "prettier": "^3.0.2",
     "sass": "^1.66.1"
   },
-  "browserslist": [
-    "last 3 and_chr versions",
-    "last 3 chrome versions",
-    "last 3 opera versions",
-    "last 3 ios_saf versions",
-    "last 3 safari versions"
-  ],
-  "dependencies": {
-    "bootstrap-icons": "^1.10.5"
-  },
-  "staticFiles": {
-    "staticPath": "src/images",
-    "watcherGlob": "**"
-  }
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
