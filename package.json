@@ -4,14 +4,15 @@
   "main": "js/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html --open",
+    "dev": "parcel src/index.html --open",
     "start": "npm run build && npm run dev",
-    "build": "parcel build index.html"
+    "build": "parcel build src/index.html --out-dir dist --no-cache"
   },
   "devDependencies": {
     "eslint": "^8.47.0",
     "node-sass": "^9.0.0",
     "parcel-bundler": "^1.8.1",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "prettier": "^3.0.2",
     "sass": "^1.66.1"
   },
@@ -24,5 +25,9 @@
   ],
   "dependencies": {
     "bootstrap-icons": "^1.10.5"
+  },
+  "staticFiles": {
+    "staticPath": "src/images",
+    "watcherGlob": "**"
   }
 }

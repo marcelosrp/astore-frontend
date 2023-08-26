@@ -1,4 +1,5 @@
 import '../scss/main.scss'
+import '../scss/home.scss'
 
 function addImagesToContainer(imageUrls) {
   const container = document.querySelector('.contact__clients__logos')
