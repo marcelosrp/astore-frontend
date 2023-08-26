@@ -43,7 +43,7 @@ const openCase = () => {
   })
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   caseGallery()
   openCase()
 })

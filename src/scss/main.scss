@@ -395,3 +395,40 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.gallery {
+  &__mainImage {
+    img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__thumbs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 3rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > div {
+      background-color: var(--color-light-blue2);
+      width: 13rem;
+      height: 13rem;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
+
+    img {
+      cursor: pointer;
+      object-fit: cover;
+    }
+  }
+}
