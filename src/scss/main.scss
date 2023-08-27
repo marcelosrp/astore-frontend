@@ -118,6 +118,30 @@ a {
   }
 }
 
+.scroll-to-top {
+  background-color: var(--color-blue);
+  border: 0.2rem solid var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 5.2rem;
+  width: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+
+  i {
+    font-size: 2.4rem;
+
+    &::before {
+      color: var(--color-white);
+    }
+  }
+}
+
 .container {
   max-width: 192rem;
   margin: 0 auto;
@@ -341,6 +365,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   &__content {
     display: flex;
