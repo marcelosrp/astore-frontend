@@ -4,8 +4,8 @@
   "source": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html src/case.html",
-    "build": "parcel build src/index.html src/case.html"
+    "start": "parcel src/index.html src/cases.html",
+    "build": "parcel build src/index.html src/cases.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",

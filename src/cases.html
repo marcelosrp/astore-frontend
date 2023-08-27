@@ -33,12 +33,22 @@
   <main>
     <section class="heroCase">
       <div class="container">
+        <div class="menu-hamburger" aria-label="menu hamburger">
+          <input id="toggle" class="menu-hamburger__toggle" type="checkbox" />
+          <label for="toggle" class="hamburger">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+          </label>
+        </div>
         <div class="heroCase__content">
-          <picture class="heroCase__logo">
-            <source media="(min-width:650px)" srcset="images/logo-astore.svg" alt="Astore" width="248" height="95">
-            <img src="images/logo-astore-branco.svg" alt="Astore" width="248" height="95">
-            <span class="heroCase__logo__legend">Business Advisory</span>
-          </picture>
+          <a href="index.html">
+            <picture class="heroCase__logo">
+              <source media="(min-width:650px)" srcset="images/logo-astore.svg" alt="Astore" width="248" height="95">
+              <img src="images/logo-astore-branco.svg" alt="Astore" width="248" height="95">
+              <span class="heroCase__logo__legend">Business Advisory</span>
+            </picture>
+          </a>
         </div>
       </div>
     </section>
